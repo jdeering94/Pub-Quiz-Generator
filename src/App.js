@@ -8,6 +8,7 @@ import Category from './components/Category';
 import MyQuiz from './components/MyQuiz';
 
 function App() {
+
   return (
     <BrowserRouter>
       <Navbar />
