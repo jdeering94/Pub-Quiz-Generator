@@ -1,23 +1,37 @@
 import React from 'react';
-// import { triviaAPI } from '../lib/api';
+import { triviaAPI } from '../lib/api';
+import { useParams } from 'react-router-dom';
 
 function Category() {
-  // const [state, setState] = React.useState('null');
+  const [questions, setQuestions] = React.useState(null);
+  const { category } = useParams();
 
-  // React.useEffect(() => {
-  //   const getData = async () => {
-  //     const resp = await triviaAPI();
-  //     console.log('resp', resp);
-  //     setState(resp);
-  //   };
-  //   getData();
-  // }, []);
+  React.useEffect(() => {
+    const getData = async () => {
+      const resp = await triviaAPI(category);
+      console.log('resp', resp);
+      setQuestions(resp);
+    };
+    getData();
+  }, [category]);
 
-  // console.log('state', state);
+  console.log('questions', questions);
 
   return (
     <section>
-      <h1>Specific Category</h1>
+      <h1>{category}</h1>
+      <div className="container">
+        {!questions ? (
+          <p>Loading...</p>
+        ) : (
+          questions.map((question) => (
+            <div className="questionContainer" key={question.question}>
+              {question.question}
+              {question.answer}
+            </div>
+          ))
+        )}
+      </div>
     </section>
   );
 }
