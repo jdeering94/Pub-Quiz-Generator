@@ -1,12 +1,12 @@
 import React from 'react';
-import { cocktailAPI } from './lib/api';
+import { triviaAPI } from './lib/api';
 
 function App() {
   const [state, setState] = React.useState('null');
 
   React.useEffect(() => {
     const getData = async () => {
-      const resp = await cocktailAPI();
+      const resp = await triviaAPI();
       console.log('resp', resp);
       setState(resp);
     };

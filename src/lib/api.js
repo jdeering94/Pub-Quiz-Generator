@@ -1,7 +1,26 @@
 import axios from 'axios';
 
-const baseURL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+const baseURL = 'https://api.api-ninjas.com/v1/trivia?category';
 
-export const cocktailAPI = () => {
-  return axios.get(baseURL);
+// artliterature;
+// language;
+// sciencenature;
+// general;
+// fooddrink;
+// peopleplaces;
+// geography;
+// historyholidays;
+// entertainment;
+// toysgames;
+// music;
+// mathematics;
+// religionmythology;
+// sportsleisure;
+
+export const triviaAPI = () => {
+  return axios({
+    method: 'get',
+    url: `${baseURL}=music`,
+    headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY }
+  });
 };
