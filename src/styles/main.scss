@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
 
 :root {
-  --navHeight: 65px;
+  --navHeight: 59px;
 }
 
 body {
@@ -47,6 +47,7 @@ body {
       text-decoration: none;
       color: #fff;
       
+      
       .category {
         border: 2px solid orange;
         padding: 20px 30px;
@@ -55,6 +56,14 @@ body {
         text-transform: capitalize;
         background-color: #000;
         font-size: 18px;
+        transition: all .25s ease-in-out;
+
+        &:hover {
+        background-color: orange;
+        color: #000;
+        border: 2px solid #000;
+        transform: scale(1.3);
+      }
       }
     }
   }
