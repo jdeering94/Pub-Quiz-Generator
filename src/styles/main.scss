@@ -1,1 +1,30 @@
-@import '~bulma/bulma.sass';
+// @import '~bulma/bulma.sass';
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.categories-container {
+  border: 2px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  .category-link {
+    text-decoration: none;
+    color: black;
+    
+    .category {
+      border: 2px solid orange;
+      padding: 20px;
+      margin: 5px 10px;
+      border-radius: 10px;
+      text-transform: capitalize;
+    }
+  
+  }
+}
