@@ -16,7 +16,7 @@ function Categories() {
     'music',
     'mathematics',
     'religionmythology',
-    'sportsleisure'
+    'sportsleisure',
   ];
 
   function cleanUpName(name) {
@@ -28,10 +28,10 @@ function Categories() {
   return (
     <section>
       <h1>All Categories</h1>
-      <div className='categories-container'>
+      <div className="categories-container">
         {allCategories.map((category) => (
-          <Link className='category-link' to={`:${category}`} key={category}>
-            <div className='category'>{cleanUpName(category)}</div>
+          <Link className="category-link" to={category} key={category}>
+            <div className="category">{cleanUpName(category)}</div>
           </Link>
         ))}
       </div>
