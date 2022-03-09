@@ -2,22 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Categories() {
-  // const allCategories = [
-  //   'artliterature',
-  //   'language',
-  //   'sciencenature',
-  //   'general',
-  //   'fooddrink',
-  //   'peopleplaces',
-  //   'geography',
-  //   'historyholidays',
-  //   'entertainment',
-  //   'toysgames',
-  //   'music',
-  //   'mathematics',
-  //   'religionmythology',
-  //   'sportsleisure'
-  // ];
+  
   const allCategories = {
     artliterature: 'Art & Literature',
     language: 'Language',
@@ -40,7 +25,7 @@ function Categories() {
       <h1>All Categories</h1>
       <div className='categories-container'>
         {Object.keys(allCategories).map((category) => (
-          <Link className='category-link' to={`:${category}`} key={category}>
+          <Link className='category-link' to={category} key={category}>
             <div className='category'>{allCategories[category]}</div>
           </Link>
         ))}

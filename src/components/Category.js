@@ -4,30 +4,28 @@ import { useParams } from 'react-router-dom';
 
 function Category() {
   const [questions, setQuestions] = React.useState(null);
-  const { category } = useParams();
+  const { category_name } = useParams();
 
   React.useEffect(() => {
     const getData = async () => {
-      const resp = await triviaAPI(category);
-      console.log('resp', resp);
-      setQuestions(resp);
+      const resp = await triviaAPI(category_name);
+      console.log('resp', resp.data);
+      setQuestions(resp.data);
     };
     getData();
-  }, [category]);
-
-  console.log('questions', questions);
+  }, [category_name]);
 
   return (
     <section>
-      <h1>{category}</h1>
+      <h1>{category_name}</h1>
       <div className="container">
         {!questions ? (
           <p>Loading...</p>
         ) : (
           questions.map((question) => (
             <div className="questionContainer" key={question.question}>
-              {question.question}
-              {question.answer}
+              <span id="q">{question.question}</span>
+              <span id="a">{question.answer}</span>
             </div>
           ))
         )}
