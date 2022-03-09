@@ -1,25 +1,25 @@
 import React from 'react';
-import { triviaAPI } from './lib/api';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Categories from './components/Categories';
+import Category from './components/Category';
+import MyQuiz from './components/MyQuiz';
 
 function App() {
-  const [state, setState] = React.useState('null');
-
-  React.useEffect(() => {
-    const getData = async () => {
-      const resp = await triviaAPI();
-      console.log('resp', resp);
-      setState(resp);
-    };
-    getData();
-  }, []);
-
-  console.log('state', state);
 
   return (
-    <>
-      <h1>Hello world!!!</h1>
-      <p>Welome to our project!</p>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/categories' element={<Categories />} />
+        <Route path='/categories/:category_name' element={<Category />} />
+        <Route path='/myquiz' element={<MyQuiz />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
