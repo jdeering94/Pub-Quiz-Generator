@@ -2,29 +2,60 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
 
+:root {
+  --navHeight: 65px;
+}
+
 body {
   margin: 0;
   font-family: 'Fredoka', sans-serif;
 }
 
-.categories-container {
-  border: 2px solid green;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  
-  .category-link {
+.navbar {
+  // border: 2px solid blue;
+  padding: 20px 0;
+  background-color: #000;
+
+  .navbar-item {
+    padding: 0 20px;
     text-decoration: none;
-    color: black;
+    color: #fff;
+
+  }
+}
+
+.categories-section {
+  background-image: url('../assets/pub.jpeg');
+  background-size: cover;
+  height: calc(100vh - var(--navHeight));
+
+  h1 {
+    margin: 0;
+    padding: 30px;
+    color: #fff;
+  }
+
+  .categories-container {
+    // border: 2px solid green;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
-    .category {
-      border: 2px solid orange;
-      padding: 20px;
-      margin: 5px 10px;
-      border-radius: 10px;
-      text-transform: capitalize;
+    .category-link {
+      text-decoration: none;
+      color: #fff;
+      
+      .category {
+        border: 2px solid orange;
+        padding: 20px 30px;
+        margin: 10px 20px;
+        border-radius: 10px;
+        text-transform: capitalize;
+        background-color: #000;
+        font-size: 18px;
+      }
     }
-  
   }
 }

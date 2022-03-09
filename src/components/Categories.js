@@ -26,7 +26,7 @@ function Categories() {
   }
 
   return (
-    <section>
+    <section className='categories-section'>
       <h1>All Categories</h1>
       <div className='categories-container'>
         {allCategories.map((category) => (
