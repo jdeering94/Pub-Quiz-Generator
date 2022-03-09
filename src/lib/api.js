@@ -17,10 +17,10 @@ const baseURL = 'https://api.api-ninjas.com/v1/trivia?category';
 // religionmythology;
 // sportsleisure;
 
-export const triviaAPI = () => {
+export const triviaAPI = (category) => {
   return axios({
     method: 'get',
-    url: `${baseURL}=music`,
-    headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY }
+    url: `${baseURL}=${category}&limit=30`,
+    headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY },
   });
 };
