@@ -18,37 +18,40 @@ function Category({ allCategories }) {
 
   const localStorage = window.localStorage;
 
-  const [savedQs, setSavedQs] = React.useState({
-    qId: '',
-    data: {
-      category: '',
-      question: '',
-      answer: ''
+  function getState() {
+    if (localStorage.savedQuestions) {
+      return JSON.parse(localStorage.savedQuestions);
+    } else {
+      return [];
     }
-  });
+  }
+
+  const [savedQs, setSavedQs] = React.useState(getState());
 
   function saveQuestion(e) {
-    console.log(e);
-    console.log('etarget:', e.target);
-    console.log('category', e.target.parentNode.parentNode.classList[1]);
-    console.log('etargetchildnodes', e.target.childNodes);
-    console.log('question', e.target.childNodes[0].innerText);
-    console.log('answer', e.target.childNodes[1].innerText);
+    // console.log(e);
+    // console.log('etarget:', e.target);
+    // console.log('category', e.target.parentNode.parentNode.classList[1]);
+    // console.log('etargetchildnodes', e.target.childNodes);
+    // console.log('question', e.target.childNodes[0].innerText);
+    // console.log('answer', e.target.childNodes[1].innerText);
     const ques = e.target.childNodes[0].innerText;
     const ans = e.target.childNodes[1].innerText;
     const cat = e.target.parentNode.parentNode.classList[1];
     // setSavedQs({ ...savedQs, category: cat, question: ques, answer: ans });
-    setSavedQs({
+    setSavedQs([
       ...savedQs,
-      qId: uuidv4(),
-      data: { ...savedQs.data, category: cat, question: ques, answer: ans }
-    });
-    // localStorage.setItem('savedQuestions', JSON.stringify([category, question, answer]));
+      {
+        qId: uuidv4(),
+        data: { category: cat, question: ques, answer: ans }
+      }
+    ]);
+
     localStorage.setItem('savedQuestions', JSON.stringify(savedQs));
-    console.log('localStorage:', localStorage.savedQuestions);
-    console.log('JSON parsed q:', JSON.parse(localStorage.savedQuestions));
   }
+
   console.log('localStorage:', localStorage.savedQuestions);
+  // console.log('JSON parsed q:', JSON.parse(localStorage.savedQuestions));
 
   return (
     <section className={`category-container ${category_name}`}>
