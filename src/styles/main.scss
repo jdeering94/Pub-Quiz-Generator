@@ -135,7 +135,49 @@ h1 {
   background-image: url('../assets/toysgames.jpeg');
 }
 
+.category-container.myQuiz {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/myquiz.jpeg');
+}
 
+.home-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/home-body.jpeg');
+  color: #fff;
+  height: 90vh;
+  margin-top: 0;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.about-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/about-body.jpeg');
+
+  color: #fff;
+  height: 90vh;
+  margin-top: 0;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-body h1 {
+  font-size: 45px;
+}
+
+.about-text {
+  font-size: 20px;
+  width: 75%;
+}
 
 .all-questions-container,
 .randomQuizContainer {
