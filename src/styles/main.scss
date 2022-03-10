@@ -140,15 +140,19 @@ body {
   margin-top: 0;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-body h1 {
   font-size: 45px;
-  height: 10vh;
 }
 
-.about-body p {
+.about-text {
   font-size: 20px;
+  width: 75%;
 }
 
 .all-questions-container,
