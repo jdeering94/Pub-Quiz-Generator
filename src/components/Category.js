@@ -28,30 +28,20 @@ function Category({ allCategories }) {
 
   const [savedQs, setSavedQs] = React.useState(getState());
 
-  function saveQuestion(e) {
-    // console.log(e);
-    // console.log('etarget:', e.target);
-    // console.log('category', e.target.parentNode.parentNode.classList[1]);
-    // console.log('etargetchildnodes', e.target.childNodes);
-    // console.log('question', e.target.childNodes[0].innerText);
-    // console.log('answer', e.target.childNodes[1].innerText);
-    const ques = e.target.childNodes[0].innerText;
-    const ans = e.target.childNodes[1].innerText;
-    const cat = e.target.parentNode.parentNode.classList[1];
-    // setSavedQs({ ...savedQs, category: cat, question: ques, answer: ans });
+  React.useEffect(() => {
+    localStorage.setItem('savedQuestions', JSON.stringify(savedQs));
+    // console.log('localStorage:', localStorage.savedQuestions);
+  }, [localStorage, savedQs]);
+
+  function saveQuestion(ques, ans) {
     setSavedQs([
       ...savedQs,
       {
         qId: uuidv4(),
-        data: { category: cat, question: ques, answer: ans }
+        data: { category: category_name, question: ques, answer: ans }
       }
     ]);
-
-    localStorage.setItem('savedQuestions', JSON.stringify(savedQs));
   }
-
-  console.log('localStorage:', localStorage.savedQuestions);
-  // console.log('JSON parsed q:', JSON.parse(localStorage.savedQuestions));
 
   return (
     <section className={`category-container ${category_name}`}>
@@ -60,10 +50,14 @@ function Category({ allCategories }) {
         {!questions ? (
           <p>Loading...</p>
         ) : (
-          questions.map((question) => (
-            <div className='questionContainer' key={question.question} onClick={saveQuestion}>
-              <span id='question'>{question.question}</span>
-              <span id='answer'>{question.answer}</span>
+          questions.map(({ question, answer }) => (
+            <div
+              className='questionContainer'
+              key={question}
+              onClick={() => saveQuestion(question, answer)}
+            >
+              <span id='question'>{question}</span>
+              <span id='answer'>{answer}</span>
             </div>
           ))
         )}
