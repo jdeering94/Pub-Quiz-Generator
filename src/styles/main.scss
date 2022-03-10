@@ -27,7 +27,6 @@ body {
     padding: 0 20px;
     text-decoration: none;
     color: #fff;
-
   }
 }
 
@@ -49,11 +48,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
     .category-link {
       text-decoration: none;
       color: #fff;
-      
+
       .category {
         border: 2px solid orange;
         padding: 20px 30px;
@@ -62,19 +61,18 @@ body {
         text-transform: capitalize;
         background-color: #000;
         font-size: 18px;
-        transition: all .25s ease-in-out;
+        transition: all 0.25s ease-in-out;
 
         &:hover {
-        background-color: orange;
-        color: #000;
-        border: 2px solid #000;
-        transform: scale(1.3);
-      }
+          background-color: orange;
+          color: #000;
+          border: 2px solid #000;
+          transform: scale(1.3);
+        }
       }
     }
   }
 }
-
 
 .category-container {
   background-repeat: no-repeat;
@@ -103,6 +101,18 @@ body {
   background-image: url('../assets/historyholidays.jpeg');
   background-position: center bottom;
 }
+.category-container.sciencenature {
+  background-image: url('../assets/scienceandnature.jpeg');
+}
+.category-container.fooddrink {
+  background-image: url('../assets/fooddrink.jpeg');
+}
+.category-container.mathematics {
+  background-image: url('../assets/mathematics.jpeg');
+}
+.category-container.music {
+  background-image: url('../assets/music.jpeg');
+}
 
 .all-questions-container {
   display: flex;
@@ -127,7 +137,7 @@ body {
   margin: 10px;
   padding: 10px;
   border: 3px solid azure;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 
   &:hover {
     cursor: pointer;
@@ -146,7 +156,6 @@ body {
   // border: 2px solid orange;
   color: orange;
 }
-
 
 // this is not working yet
 @media (max-width: 725px) {
