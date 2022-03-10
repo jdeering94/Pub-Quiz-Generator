@@ -23,9 +23,10 @@ h1 {
   background-color: #000;
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
 
   .navbar-item {
-    padding: 0 20px;
+    padding: 20px;
     text-decoration: none;
     color: #fff;
   }
@@ -156,6 +157,8 @@ h1 {
 
 .about-body h1 {
   font-size: 45px;
+  padding-bottom: 20px;
+  padding-top: 0;
 }
 
 .about-text {
@@ -273,6 +276,7 @@ h1 {
   text-align: left;
   margin-top: 15px;
   justify-content: center;
+  align-items: center;
 
   .generate-quiz {
     align-self: center;
@@ -296,6 +300,12 @@ h1 {
   }
 }
 
+.category-container .all-questions-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .saved {
   background-color: #8c8c8c;
   font-weight: 300;
@@ -310,13 +320,13 @@ h1 {
   background-color: #000;
   border-radius: 5px;
   border: 2px solid #bebebe;
-  padding: 5px;
+  padding: 6px 9px;
   margin: 4px 0;
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
-
   flex-direction: column;
-  width: 100%;
+  width: 600px;
+  max-width: 90%;
 }
 
 #generated-category {
@@ -333,8 +343,9 @@ h1 {
 
 @media (max-width: 585px) {
   .categories-section .categories-container .category-link .category {
-    padding: 15px 25px;
-  }
+      padding: 15px 25px;
+    }
+
 
   .navbar {
     padding: 10px 0;
@@ -356,3 +367,4 @@ h1 {
   }
 
 }
+
