@@ -2,7 +2,7 @@ import React from 'react';
 import { triviaAPI } from '../lib/api';
 import { useParams } from 'react-router-dom';
 
-function Category() {
+function Category({ allCategories }) {
   const [questions, setQuestions] = React.useState(null);
   const { category_name } = useParams();
 
@@ -16,16 +16,16 @@ function Category() {
   }, [category_name]);
 
   return (
-    <section>
-      <h1>{category_name}</h1>
-      <div className="container">
+    <section className={`category-container ${category_name}`}>
+      <h1>{allCategories[category_name]}</h1>
+      <div className='container'>
         {!questions ? (
           <p>Loading...</p>
         ) : (
           questions.map((question) => (
-            <div className="questionContainer" key={question.question}>
-              <span id="q">{question.question}</span>
-              <span id="a">{question.answer}</span>
+            <div className='questionContainer' key={question.question}>
+              <span id='q'>{question.question}</span>
+              <span id='a'>{question.answer}</span>
             </div>
           ))
         )}

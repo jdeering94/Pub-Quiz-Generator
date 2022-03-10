@@ -1,6 +1,12 @@
 // @import '~bulma/bulma.sass';
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap');
 
 :root {
   --navHeight: 59px;
@@ -8,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
 
 .navbar {
@@ -47,7 +53,6 @@ body {
       text-decoration: none;
       color: #fff;
       
-      
       .category {
         border: 2px solid orange;
         padding: 20px 30px;
@@ -66,5 +71,41 @@ body {
       }
       }
     }
+  }
+}
+
+.category-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  h1 {
+    margin: 0;
+    padding: 30px;
+    color: #fff;
+  }
+}
+.category-container.language {
+  // background-image: url('../assets/language.jpeg');
+}
+.category-container.geography {
+  background-image: url('../assets/geography.jpeg');
+}
+.category-container.religionmythology {
+  background-image: url('../assets/religionmythology.jpeg');
+}
+.category-container.sportsleisure {
+  background-image: url('../assets/sportsleisure.jpeg');
+}
+.category-container.historyholidays {
+  background-image: url('../assets/historyholidays.jpeg');
+  background-position: center bottom;
+}
+
+// this is not working yet
+@media (max-width: 725px) {
+  .category {
+    font-size: 10px;
+    background-color: blue;
   }
 }
