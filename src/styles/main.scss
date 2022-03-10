@@ -132,6 +132,25 @@ body {
   background-image: url('../assets/myquiz.jpeg');
 }
 
+.about-body {
+  background-image: url('../assets/about-body.jpeg'),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  color: #fff;
+  height: 90vh;
+  margin-top: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-body h1 {
+  font-size: 45px;
+  height: 10vh;
+}
+
+.about-body p {
+  font-size: 20px;
+}
+
 .all-questions-container,
 .randomQuizContainer {
   display: flex;
