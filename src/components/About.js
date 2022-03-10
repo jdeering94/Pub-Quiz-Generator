@@ -13,9 +13,9 @@ function About() {
           to your basket.
         </p>
         <p>
-          Don't have the time to pick each question? No problem! In the basket
-          there is a random quiz option that generates 25 questions from random
-          categories. Easy!
+          Don't have the time to pick each question? No problem! There is a
+          random quiz option that generates 25 questions from random categories.
+          Easy!
         </p>
       </div>
     </section>
