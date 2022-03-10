@@ -11,7 +11,12 @@ function Category({ allCategories }) {
     const getData = async () => {
       const resp = await triviaAPI(category_name);
       console.log('resp', resp.data);
-      setQuestions(resp.data);
+      const respWithId = resp.data.map((response) => {
+        return { ...response, qId: uuidv4() };
+      });
+      console.log('respWithId', respWithId);
+      // setQuestions(resp.data);
+      setQuestions(respWithId);
     };
     getData();
   }, [category_name]);
@@ -33,14 +38,24 @@ function Category({ allCategories }) {
     // console.log('localStorage:', localStorage.savedQuestions);
   }, [localStorage, savedQs]);
 
-  function saveQuestion(ques, ans) {
-    setSavedQs([
-      ...savedQs,
-      {
-        qId: uuidv4(),
-        data: { category: category_name, question: ques, answer: ans }
-      }
-    ]);
+  function saveQuestion(ques, ans, id) {
+    // console.log(e.target);
+    // if (id DOESNT exist) {
+    // check for existing question(id):
+    const filteredQuestions = savedQs.find((ques) => ques.qId === id);
+    console.log('filteredQuestions', filteredQuestions);
+    if (!filteredQuestions) {
+      setSavedQs([
+        ...savedQs,
+        {
+          // qId: uuidv4(),
+          qId: id,
+          category: category_name,
+          question: ques,
+          answer: ans
+        }
+      ]);
+    }
   }
 
   return (
@@ -50,11 +65,13 @@ function Category({ allCategories }) {
         {!questions ? (
           <p>Loading...</p>
         ) : (
-          questions.map(({ question, answer }) => (
+          // console.log('questions', questions)
+          questions.map(({ question, answer, qId }) => (
             <div
               className='questionContainer'
               key={question}
-              onClick={() => saveQuestion(question, answer)}
+              // onClick={() => saveQuestion(question, answer)}
+              onClick={() => saveQuestion(question, answer, qId)}
             >
               <span id='question'>{question}</span>
               <span id='answer'>{answer}</span>
