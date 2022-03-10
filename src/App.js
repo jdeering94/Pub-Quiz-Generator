@@ -8,6 +8,22 @@ import Category from './components/Category';
 import MyQuiz from './components/MyQuiz';
 
 function App() {
+  const allCategories = {
+    artliterature: 'Art & Literature',
+    language: 'Language',
+    sciencenature: 'Science & Nature',
+    general: 'General',
+    fooddrink: 'Food & Drink',
+    peopleplaces: 'People & Places',
+    geography: 'Geography',
+    historyholidays: 'History & Holidays',
+    entertainment: 'Entertainment',
+    toysgames: 'Toys & Games',
+    music: 'Music',
+    mathematics: 'Mathematics',
+    religionmythology: 'Religion & Mythology',
+    sportsleisure: 'Sports & Leisure'
+  };
 
   return (
     <BrowserRouter>
@@ -15,8 +31,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/categories' element={<Categories />} />
-        <Route path='/categories/:category_name' element={<Category />} />
+        <Route path='/categories' element={<Categories allCategories={allCategories} />} />
+        <Route
+          path='/categories/:category_name'
+          element={<Category allCategories={allCategories} />}
+        />
         <Route path='/myquiz' element={<MyQuiz />} />
       </Routes>
     </BrowserRouter>

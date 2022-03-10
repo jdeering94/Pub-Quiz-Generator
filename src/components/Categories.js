@@ -1,25 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Categories() {
-  
-  const allCategories = {
-    artliterature: 'Art & Literature',
-    language: 'Language',
-    sciencenature: 'Science & Nature',
-    general: 'General',
-    fooddrink: 'Food & Drink',
-    peopleplaces: 'People & Places',
-    geography: 'Geography',
-    historyholidays: 'History & Holidays',
-    entertainment: 'Entertainment',
-    toysgames: 'Toys & Games',
-    music: 'Music',
-    mathematics: 'Mathematics',
-    religionmythology: 'Religion & Mythology',
-    sportsleisure: 'Sports & Leisure'
-  };
-
+function Categories({ allCategories }) {
   return (
     <section className='categories-section'>
       <h1>All Categories</h1>
