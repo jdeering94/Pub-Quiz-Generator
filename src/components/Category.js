@@ -12,7 +12,7 @@ function Category({ allCategories }) {
       const resp = await triviaAPI(category_name);
       console.log('resp', resp.data);
       const respWithId = resp.data.map((response) => {
-        return { ...response, qId: uuidv4(), isSaved: false };
+        return { ...response, qId: uuidv4() };
       });
       console.log('respWithId', respWithId);
       // setQuestions(resp.data);
@@ -35,7 +35,6 @@ function Category({ allCategories }) {
 
   React.useEffect(() => {
     localStorage.setItem('savedQuestions', JSON.stringify(savedQs));
-    // console.log('localStorage:', localStorage.savedQuestions);
   }, [localStorage, savedQs]);
 
   function saveQuestion(ques, ans, id) {
@@ -46,16 +45,13 @@ function Category({ allCategories }) {
       setSavedQs([
         ...savedQs,
         {
-          // qId: uuidv4(),
           qId: id,
           category: category_name,
           question: ques,
-          answer: ans,
-          isSaved: true,
-        },
+          answer: ans
+        }
       ]);
       console.log();
-      // .style.backgroundColor = ''
     } else {
       const filteredQuestions = savedQs.filter((ques) => ques.qId !== id);
       setSavedQs(filteredQuestions);
@@ -65,24 +61,22 @@ function Category({ allCategories }) {
   return (
     <section className={`category-container ${category_name}`}>
       <h1>{allCategories[category_name]}</h1>
-      <div className="all-questions-container">
+      <div className='all-questions-container'>
         {!questions ? (
           <p>Loading...</p>
         ) : (
-          // console.log('questions', questions)
-          questions.map(({ question, answer, qId, isSaved }) => (
+          questions.map(({ question, answer, qId }) => (
             <div
               key={question}
-              // onClick={() => saveQuestion(question, answer)}
               className={
                 savedQs.find((ques) => ques.qId === qId)
-                  ? 'yellow questionContainer'
+                  ? 'saved questionContainer'
                   : 'questionContainer'
               }
               onClick={() => saveQuestion(question, answer, qId)}
             >
-              <span id="question">{question}</span>
-              <span id="answer">{answer}</span>
+              <span id='question'>{question}</span>
+              <span id='answer'>{answer}</span>
             </div>
           ))
         )}
