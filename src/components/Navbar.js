@@ -17,6 +17,9 @@ function Navbar() {
         <Link className='navbar-item' to='/myquiz'>
           My Quiz
         </Link>
+        <Link className='navbar-item' to='/randomquiz'>
+          Random Quiz
+        </Link>
       </nav>
     </header>
   );
