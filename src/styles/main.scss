@@ -85,27 +85,27 @@ body {
     color: #fff;
   }
 }
-.category-container.language {
-  // background-image: url('../assets/language.jpeg');
+.category-container.artliterature {
+  background-image: url('../assets/artliterature.jpeg');
+}
+.category-container.entertainment {
+  background-image: url('../assets/entertainment.jpeg');
+}
+.category-container.fooddrink {
+  background-image: url('../assets/fooddrink.jpeg');
+}
+.category-container.general {
+  background-image: url('../assets/general.jpeg');
 }
 .category-container.geography {
   background-image: url('../assets/geography.jpeg');
-}
-.category-container.religionmythology {
-  background-image: url('../assets/religionmythology.jpeg');
-}
-.category-container.sportsleisure {
-  background-image: url('../assets/sportsleisure.jpeg');
 }
 .category-container.historyholidays {
   background-image: url('../assets/historyholidays.jpeg');
   background-position: center bottom;
 }
-.category-container.sciencenature {
-  background-image: url('../assets/scienceandnature.jpeg');
-}
-.category-container.fooddrink {
-  background-image: url('../assets/fooddrink.jpeg');
+.category-container.language {
+  background-image: url('../assets/language.jpeg');
 }
 .category-container.mathematics {
   background-image: url('../assets/mathematics.jpeg');
@@ -113,8 +113,27 @@ body {
 .category-container.music {
   background-image: url('../assets/music.jpeg');
 }
+.category-container.peopleplaces {
+  background-image: url('../assets/peopleplaces.jpeg');
+}
+.category-container.religionmythology {
+  background-image: url('../assets/religionmythology.jpeg');
+}
+.category-container.sciencenature {
+  background-image: url('../assets/scienceandnature.jpeg');
+}
+.category-container.sportsleisure {
+  background-image: url('../assets/sportsleisure.jpeg');
+}
+.category-container.toysgames {
+  background-image: url('../assets/toysgames.jpeg');
+}
+.category-container.myQuiz {
+  background-image: url('../assets/myquiz.jpeg');
+}
 
-.all-questions-container {
+.all-questions-container,
+.randomQuizContainer {
   display: flex;
   flex-wrap: wrap;
   margin: 0 25px;
