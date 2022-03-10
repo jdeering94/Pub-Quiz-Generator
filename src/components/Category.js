@@ -63,7 +63,7 @@ function Category({ allCategories }) {
       <h1>{allCategories[category_name]}</h1>
       <div className='all-questions-container'>
         {!questions ? (
-          <p>Loading...</p>
+          <h2>Loading...</h2>
         ) : (
           questions.map(({ question, answer, qId }) => (
             <div

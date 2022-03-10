@@ -3,6 +3,7 @@ import { randomQuiz } from '../lib/api';
 
 function RandomQuiz({ allCategories }) {
   const [randomQuestions, setRandomQuestions] = React.useState(null);
+  const [status, setStatus] = React.useState(null);
 
   const getData = async () => {
     const resp = await randomQuiz();
@@ -12,6 +13,7 @@ function RandomQuiz({ allCategories }) {
 
   function handleButton(e) {
     e.preventDefault();
+    setStatus('Generating...');
     getData();
   }
 
@@ -24,7 +26,7 @@ function RandomQuiz({ allCategories }) {
             Generate Quiz
           </button>
           {!randomQuestions ? (
-            <p></p>
+            <h2>{status}</h2>
           ) : (
             randomQuestions.map(({ question, answer, category }) => (
               <div className='generated-questionContainer' key={question}>
