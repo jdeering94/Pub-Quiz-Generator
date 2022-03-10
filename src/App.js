@@ -23,22 +23,31 @@ function App() {
     music: 'Music',
     mathematics: 'Mathematics',
     religionmythology: 'Religion & Mythology',
-    sportsleisure: 'Sports & Leisure'
+    sportsleisure: 'Sports & Leisure',
   };
 
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/categories' element={<Categories allCategories={allCategories} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route
-          path='/categories/:category_name'
+          path="/categories"
+          element={<Categories allCategories={allCategories} />}
+        />
+        <Route
+          path="/categories/:category_name"
           element={<Category allCategories={allCategories} />}
         />
-        <Route path='/myquiz' element={<MyQuiz />} />
-        <Route path='/randomquiz' element={<RandomQuiz allCategories={allCategories} />} />
+        <Route
+          path="/myquiz"
+          element={<MyQuiz allCategories={allCategories} />}
+        />
+        <Route
+          path="/randomquiz"
+          element={<RandomQuiz allCategories={allCategories} />}
+        />
       </Routes>
     </BrowserRouter>
   );
