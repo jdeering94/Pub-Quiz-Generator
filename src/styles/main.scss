@@ -129,12 +129,29 @@ body {
   background-image: url('../assets/toysgames.jpeg');
 }
 .category-container.myQuiz {
-  background-image: url('../assets/myquiz.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/myquiz.jpeg');
+}
+
+.home-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/home-body.jpeg');
+  color: #fff;
+  height: 90vh;
+  margin-top: 0;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
 }
 
 .about-body {
-  background-image: url('../assets/about-body.jpeg'),
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/about-body.jpeg');
+
   color: #fff;
   height: 90vh;
   margin-top: 0;

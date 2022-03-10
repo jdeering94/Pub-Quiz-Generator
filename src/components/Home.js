@@ -2,8 +2,8 @@ import React from 'react';
 
 function Home() {
   return (
-    <section>
-      <h1>Home Page</h1>
+    <section className="home-body">
+      <h1>Pub Quiz Generator</h1>
     </section>
   );
 }
