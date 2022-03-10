@@ -39,12 +39,10 @@ function Category({ allCategories }) {
   }, [localStorage, savedQs]);
 
   function saveQuestion(ques, ans, id) {
-    // console.log(e.target);
-    // if (id DOESNT exist) {
     // check for existing question(id):
-    const filteredQuestions = savedQs.find((ques) => ques.qId === id);
-    console.log('filteredQuestions', filteredQuestions);
-    if (!filteredQuestions) {
+    const checkAddQuestion = savedQs.find((ques) => ques.qId === id);
+    console.log('checkAddQuestion', checkAddQuestion);
+    if (!checkAddQuestion) {
       setSavedQs([
         ...savedQs,
         {
@@ -55,6 +53,11 @@ function Category({ allCategories }) {
           answer: ans
         }
       ]);
+      console.log();
+      // .style.backgroundColor = ''
+    } else {
+      const filteredQuestions = savedQs.filter((ques) => ques.qId !== id);
+      setSavedQs(filteredQuestions);
     }
   }
 

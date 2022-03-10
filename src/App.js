@@ -6,6 +6,7 @@ import About from './components/About';
 import Categories from './components/Categories';
 import Category from './components/Category';
 import MyQuiz from './components/MyQuiz';
+import RandomQuiz from './components/RandomQuiz';
 
 function App() {
   const allCategories = {
@@ -37,6 +38,7 @@ function App() {
           element={<Category allCategories={allCategories} />}
         />
         <Route path='/myquiz' element={<MyQuiz />} />
+        <Route path='/randomquiz' element={<RandomQuiz allCategories={allCategories} />} />
       </Routes>
     </BrowserRouter>
   );
