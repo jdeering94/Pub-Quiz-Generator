@@ -84,7 +84,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: calc(100vh - var(--navHeight)); 
+  min-height: calc(100vh - var(--navHeight));
 
   // h1 {
   //   margin: 0;
@@ -235,8 +235,7 @@ h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - var(--navHeight)); 
-
+  min-height: calc(100vh - var(--navHeight));
 }
 
 .tab {
@@ -307,6 +306,10 @@ h1 {
   }
 }
 
+.yellow {
+  background-color: yellow;
+}
+
 .hide {
   display: none;
 }
@@ -357,8 +360,9 @@ h1 {
   .categories-section {
     height: calc(100vh - var(--navHeight) + 15px);
   }
-  
-  .home-body, .about-body {
+
+  .home-body,
+  .about-body {
     height: calc(100vh - var(--navHeight) - 23px);
   }
 
@@ -367,6 +371,6 @@ h1 {
   }
 
   .myQuiz-section {
-    min-height: calc(100vh - var(--navHeight) + 15px); 
+    min-height: calc(100vh - var(--navHeight) + 15px);
   }
 }

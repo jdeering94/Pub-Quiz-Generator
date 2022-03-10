@@ -12,7 +12,7 @@ function Category({ allCategories }) {
       const resp = await triviaAPI(category_name);
       console.log('resp', resp.data);
       const respWithId = resp.data.map((response) => {
-        return { ...response, qId: uuidv4() };
+        return { ...response, qId: uuidv4(), isSaved: false };
       });
       console.log('respWithId', respWithId);
       // setQuestions(resp.data);
@@ -50,8 +50,9 @@ function Category({ allCategories }) {
           qId: id,
           category: category_name,
           question: ques,
-          answer: ans
-        }
+          answer: ans,
+          isSaved: true,
+        },
       ]);
       console.log();
       // .style.backgroundColor = ''
@@ -64,20 +65,24 @@ function Category({ allCategories }) {
   return (
     <section className={`category-container ${category_name}`}>
       <h1>{allCategories[category_name]}</h1>
-      <div className='all-questions-container'>
+      <div className="all-questions-container">
         {!questions ? (
           <p>Loading...</p>
         ) : (
           // console.log('questions', questions)
-          questions.map(({ question, answer, qId }) => (
+          questions.map(({ question, answer, qId, isSaved }) => (
             <div
-              className='questionContainer'
               key={question}
               // onClick={() => saveQuestion(question, answer)}
+              className={
+                savedQs.find((ques) => ques.qId === qId)
+                  ? 'yellow questionContainer'
+                  : 'questionContainer'
+              }
               onClick={() => saveQuestion(question, answer, qId)}
             >
-              <span id='question'>{question}</span>
-              <span id='answer'>{answer}</span>
+              <span id="question">{question}</span>
+              <span id="answer">{answer}</span>
             </div>
           ))
         )}
