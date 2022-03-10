@@ -16,22 +16,21 @@ function RandomQuiz({ allCategories }) {
   }
 
   return (
-    <section className="myQuiz-section">
-      <div className="myQuiz-container">
+    <section className='myQuiz-section'>
+      <div className='myQuiz-container'>
         <h1>Generate a Random Quiz!</h1>
-
-        <div className="randomQuizContainer">
-          <button className="generate-quiz" onClick={handleButton}>
+        <div className='all-questions-container'>
+          <button className='generate-quiz' onClick={handleButton}>
             Generate Quiz
           </button>
           {!randomQuestions ? (
             <p></p>
           ) : (
             randomQuestions.map(({ question, answer, category }) => (
-              <div className="generated-questionContainer" key={question}>
-                <span id="generated-category">{allCategories[category]}</span>
-                <span id="generated-question">{question}</span>
-                <span id="generated-answer">{answer}</span>
+              <div className='generated-questionContainer' key={question}>
+                <span id='generated-category'>{allCategories[category]}</span>
+                <span id='generated-question'>{question}</span>
+                <span id='generated-answer'>{answer}</span>
               </div>
             ))
           )}
