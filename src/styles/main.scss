@@ -267,6 +267,22 @@ h1 {
 }
 
 
+.category-and-delete {
+  // border: 2px solid yellow;
+  display: flex;
+  // width: 100%;
+  justify-content: space-between;
+  
+  .x-mark {
+    color: #fff;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
 .all-questions-container {
   display: flex;
   flex-direction: column;
@@ -330,7 +346,7 @@ h1 {
 }
 
 #generated-category {
-  color: #139613;
+  color: #37d7ff;
   letter-spacing: 1.3px;
   font-size: 10px;
 }
