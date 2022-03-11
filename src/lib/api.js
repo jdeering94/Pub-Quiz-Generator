@@ -2,35 +2,34 @@ import axios from 'axios';
 
 const baseURL = 'https://api.api-ninjas.com/v1/trivia?';
 
-// ✅: quality amazing ❔ quality not amazing:
 // artliterature;
-// language ❌;
+// language;
 // sciencenature;
 // general;
 // fooddrink;
 // peopleplaces;
-// geography ✅;
-// historyholidays ❔;
+// geography;
+// historyholidays;
 // entertainment;
 // toysgames;
 // music;
 // mathematics;
-// religionmythology ✅;
-// sportsleisure ❔;
+// religionmythology;
+// sportsleisure;
 
 export const triviaAPI = (category) => {
   return axios({
     method: 'get',
     url: `${baseURL}category=${category}&limit=30`,
-    headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY },
+    headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY }
   });
 };
-export const randomQuiz = () => {
+export const randomQuiz = (numberOfQuestions) => {
   return axios({
     method: 'get',
-    url: `${baseURL}limit=25`,
+    url: `${baseURL}limit=${numberOfQuestions}`,
     headers: {
-      'X-Api-Key': process.env.REACT_APP_API_KEY,
-    },
+      'X-Api-Key': process.env.REACT_APP_API_KEY
+    }
   });
 };
