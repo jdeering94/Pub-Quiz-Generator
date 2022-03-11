@@ -145,7 +145,8 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  height: 90vh;
+  // height: 90vh;
+  min-height: calc(100vh - var(--navHeight) - 48px);
   margin-top: 0;
   padding: 20px;
   text-align: center;
@@ -392,9 +393,8 @@ h1 {
     min-height: calc(100vh - var(--navHeight) + 15px);
   }
 
-  .home-body,
-  .about-body {
-    height: calc(100vh - var(--navHeight) - 23px);
+  .home-body, .about-body {
+    min-height: calc(100vh - var(--navHeight) - 23px);
   }
 }
 
@@ -402,11 +402,10 @@ h1 {
 @media (max-width: 495px) {
   .generate-quiz {
     font-size: 15px; 
-    // font-weight: normal;
     padding: 5px 10px;
-   }
+  }
 
-   .navbar {
+  .navbar {
     padding-bottom: 15px;
 
     .navbar-item {
