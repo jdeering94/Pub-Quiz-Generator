@@ -25,7 +25,7 @@ We began by pseudocoding out the necessary code and design of the different comp
 ### Wireframes:
 
 - SCREENSHOTS of excalidraw design + pseudocode
-  <img src="./assets/joe-excalidraw.jpeg" />
+  <img src="./src/assets/joe-excalidraw.jpeg" />
 
 ## Unsolved problems / Major Hurdles
 
