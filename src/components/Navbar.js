@@ -16,7 +16,6 @@ function Navbar() {
             Categories
           </Link>
         </div>
-
         <div className='nav-userQuiz'>
           <Link className='navbar-item' to='/myquiz'>
             My Quiz
