@@ -50,7 +50,7 @@ h1 {
       color: #fff;
 
       .category {
-        border: 2px solid orange;
+        border: 5px solid orange;
         padding: 20px 30px;
         margin: 10px 20px;
         border-radius: 10px;
@@ -62,7 +62,7 @@ h1 {
         &:hover {
           background-color: orange;
           color: #000;
-          border: 2px solid #000;
+          border: 5px solid #000;
           transform: scale(1.3);
         }
       }
@@ -275,12 +275,40 @@ h1 {
   
   .x-mark {
     color: #fff;
+    transition: 0.25s ease-in-out;
     
     &:hover {
       cursor: pointer;
+      transform: scale(2);
     }
   }
 
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.generate-quiz {
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #000;
+  color: azure;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  border: 5px solid azure;
+  margin: 10px;
+  margin-top: 0;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: #000;
+    transform: scale(1.1);
+  }
 }
 
 .all-questions-container {
@@ -294,26 +322,6 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  .generate-quiz {
-    align-self: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: #000;
-    color: azure;
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: bold;
-    border: 5px solid azure;
-    margin-bottom: 10px;
-    transition: 0.2s ease-in-out;
-
-    &:hover {
-      cursor: pointer;
-      background-color: orange;
-      color: #000;
-      transform: scale(1.1);
-    }
-  }
 }
 
 .category-container .all-questions-container {
@@ -343,6 +351,10 @@ h1 {
   flex-direction: column;
   width: 600px;
   max-width: 90%;
+
+  &:hover {
+    background-color: #380550;
+  }
 }
 
 #generated-category {
@@ -355,14 +367,17 @@ h1 {
   color: orange;
 }
 
+.selected {
+  background-color: orange;
+  color: #000;
+}
 
 
 @media (max-width: 585px) {
   .categories-section .categories-container .category-link .category {
       padding: 15px 25px;
     }
-
-
+    
   .navbar {
     padding: 10px 0;
 
@@ -381,6 +396,21 @@ h1 {
   .about-body {
     height: calc(100vh - var(--navHeight) - 23px);
   }
-
 }
 
+// mobile
+@media (max-width: 495px) {
+  .generate-quiz {
+    font-size: 15px; 
+    // font-weight: normal;
+    padding: 5px 10px;
+   }
+
+   .navbar {
+    padding-bottom: 15px;
+
+    .navbar-item {
+      font-size: 14px;
+    }
+  }
+}
