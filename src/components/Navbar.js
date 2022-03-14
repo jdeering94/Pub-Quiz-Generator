@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ numQuestionsSaved, setNumQuestionsSaved }) {
   return (
     <header>
       <nav className='navbar'>
@@ -17,8 +17,9 @@ function Navbar() {
           </Link>
         </div>
         <div className='nav-userQuiz'>
-          <Link className='navbar-item' to='/myquiz'>
+          <Link className='navbar-item my-quiz' to='/myquiz'>
             My Quiz
+            <div className='num-saved-questions'>{numQuestionsSaved}</div>
           </Link>
           <Link className='navbar-item' to='/randomquiz'>
             Random Quiz

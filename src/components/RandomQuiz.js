@@ -14,14 +14,10 @@ function RandomQuiz({ allCategories }) {
 
   function handleButton(e) {
     e.preventDefault();
-    console.log(e.target.className);
-    console.log("parent element's childnodes:", e.target.parentElement.childNodes); // nodelist (array)
-
+    // console.log("parent element's childnodes:", e.target.parentElement.childNodes); // nodelist (array)
     const allButtons = e.target.parentElement.childNodes;
     allButtons.forEach((btn) => btn.classList.remove('selected'));
     e.target.classList.add('selected');
-
-    console.log(e);
     setStatus('Generating...');
     getData(e.target.value);
   }

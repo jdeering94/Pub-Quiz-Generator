@@ -2,9 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-function MyQuiz({ allCategories }) {
-  const [myQuestions, setMyQuestions] = React.useState(getState());
-
+function MyQuiz({ allCategories, setNumQuestionsSaved }) {
   function getState() {
     if (localStorage.savedQuestions) {
       return JSON.parse(localStorage.savedQuestions);
@@ -13,20 +11,32 @@ function MyQuiz({ allCategories }) {
     }
   }
 
+  const localStorage = window.localStorage;
+  // const currentState = localStorage.savedQuestions ? JSON.parse(localStorage.savedQuestions) : [];
+
+  const [myQuestions, setMyQuestions] = React.useState(getState());
+
   React.useEffect(() => {
     localStorage.setItem('savedQuestions', JSON.stringify(myQuestions));
-  }, [myQuestions]);
 
-  function removeQuestion(ques, ans, qId) {
-    const checkRemoveQuestion = myQuestions.find((ques) => ques.qId === qId);
+    const numQuestions = JSON.parse(localStorage.savedQuestions).length;
+    if (numQuestions !== 0) {
+      setNumQuestionsSaved(numQuestions);
+    } else {
+      setNumQuestionsSaved(null);
+    }
+  }, [localStorage, myQuestions, setNumQuestionsSaved]);
+
+  function removeQuestion(qId) {
+    const checkRemoveQuestion = myQuestions.find((question) => question.qId === qId);
     console.log('checkRemoveQuestion', checkRemoveQuestion);
     if (checkRemoveQuestion) {
-      const filteredQuiz = myQuestions.filter((ques) => ques.qId !== qId);
+      const filteredQuiz = myQuestions.filter((question) => question.qId !== qId);
       setMyQuestions(filteredQuiz);
     }
   }
 
-  function handleButton() {
+  function handleReset() {
     localStorage.removeItem('savedQuestions');
     setMyQuestions(getState);
   }
@@ -37,7 +47,7 @@ function MyQuiz({ allCategories }) {
       <div className='myQuiz-container'>
         <h1>My Quiz</h1>
         <div className='all-questions-container'>
-          <button className='reset-quiz' onClick={handleButton}>
+          <button className='reset-quiz' onClick={handleReset}>
             Reset Quiz
           </button>
           {myQuestions.length === 0 ? (
@@ -52,7 +62,7 @@ function MyQuiz({ allCategories }) {
                   <span id='generated-category'>{allCategories[category]}</span>
                   <span>
                     <FontAwesomeIcon
-                      onClick={() => removeQuestion(question, answer, qId)}
+                      onClick={() => removeQuestion(qId)}
                       className='x-mark'
                       icon={faXmark}
                     />

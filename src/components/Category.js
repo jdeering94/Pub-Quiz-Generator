@@ -15,7 +15,6 @@ function Category({ allCategories }) {
         return { ...response, qId: uuidv4() };
       });
       console.log('respWithId', respWithId);
-      // setQuestions(resp.data);
       setQuestions(respWithId);
     };
     getData();
