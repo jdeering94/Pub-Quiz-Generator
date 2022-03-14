@@ -10,13 +10,11 @@ Home Page
 </p>
 <p>
 Category Pages
-<img src="./src/assets/categories-image.jpeg" />
-<img src="./src/assets/category-image.jpeg" />
+<img src="./src/assets/categories-image.jpeg" /><img src="./src/assets/category-image.jpeg" />
 </p>
 <p>
 Quiz Pages
-<img src="./src/assets/myquiz-image.jpeg" />
-<img src="./src/assets/randomquiz-image.jpeg" />
+<img src="./src/assets/myquiz-image.jpeg"/><img src="./src/assets/randomquiz-image.jpeg" />
 </p>
 
 ## Technologies Used:
