@@ -1,0 +1,92 @@
+.category-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: calc(100vh - var(--navHeight));
+}
+.category-container.artliterature {
+  background-image: url('../assets/artliterature.jpeg');
+}
+.category-container.entertainment {
+  background-image: url('../assets/entertainment.jpeg');
+}
+.category-container.fooddrink {
+  background-image: url('../assets/fooddrink.jpeg');
+}
+.category-container.general {
+  background-image: url('../assets/general.jpeg');
+}
+.category-container.geography {
+  background-image: url('../assets/geography.jpeg');
+}
+.category-container.historyholidays {
+  background-image: url('../assets/historyholidays.jpeg');
+  background-position: center bottom;
+}
+.category-container.language {
+  background-image: url('../assets/language.jpeg');
+}
+.category-container.mathematics {
+  background-image: url('../assets/mathematics.jpeg');
+}
+.category-container.music {
+  background-image: url('../assets/music.jpeg');
+}
+.category-container.peopleplaces {
+  background-image: url('../assets/peopleplaces.jpeg');
+}
+.category-container.religionmythology {
+  background-image: url('../assets/religionmythology.jpeg');
+}
+.category-container.sciencenature {
+  background-image: url('../assets/scienceandnature.jpeg');
+}
+.category-container.sportsleisure {
+  background-image: url('../assets/sportsleisure.jpeg');
+}
+.category-container.toysgames {
+  background-image: url('../assets/toysgames.jpeg');
+}
+
+#answer {
+  color: orange;
+}
+
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  background-color: #000;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid azure;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: #000;
+    border: 2px solid #000;
+    transform: scale(1.15);
+
+    #answer {
+      color: purple;
+    }
+  }
+}
+
+.saved {
+  background-color: #8c8c8c;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+
+  #answer {
+    color: rgba(255, 166, 0, 0.5);
+  }
+}
+
