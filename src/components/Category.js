@@ -3,7 +3,7 @@ import { triviaAPI } from '../lib/api';
 import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
-function Category({ allCategories, numQuestionsSaved, setNumQuestionsSaved }) {
+function Category({ allCategories, setNumQuestionsSaved }) {
   const [questions, setQuestions] = React.useState(null);
   const { category_name } = useParams();
 
@@ -14,7 +14,6 @@ function Category({ allCategories, numQuestionsSaved, setNumQuestionsSaved }) {
       const respWithId = resp.data.map((response) => {
         return { ...response, qId: uuidv4() };
       });
-      console.log('respWithId', respWithId);
       setQuestions(respWithId);
     };
     getData();
@@ -45,7 +44,7 @@ function Category({ allCategories, numQuestionsSaved, setNumQuestionsSaved }) {
 
   function saveQuestion(ques, ans, id) {
     // check for existing question(id):
-    const checkAddQuestion = savedQs.find((ques) => ques.qId === id);
+    const checkAddQuestion = savedQs.find((question) => question.qId === id);
     console.log('checkAddQuestion', checkAddQuestion);
     if (!checkAddQuestion) {
       setSavedQs([
@@ -59,7 +58,7 @@ function Category({ allCategories, numQuestionsSaved, setNumQuestionsSaved }) {
       ]);
       console.log();
     } else {
-      const filteredQuestions = savedQs.filter((ques) => ques.qId !== id);
+      const filteredQuestions = savedQs.filter((question) => question.qId !== id);
       setSavedQs(filteredQuestions);
     }
   }
