@@ -5,15 +5,12 @@ Collaborators: Joe Deering & Emily Daykin
 ## Site Overview
 
 <p>
-Home Page
 <img src="./src/assets/homepage-image.jpeg" />
 </p>
 <p>
-Category Pages
 <img src="./src/assets/categories-image.jpeg" width="49%"/><img src="./src/assets/category-image.jpeg" width="49%"/>
 </p>
 <p>
-Quiz Pages
 <img src="./src/assets/myquiz-image.jpeg" width="49%"/><img src="./src/assets/randomquiz-image.jpeg" width="49%"/>
 </p>
 
