@@ -1,6 +1,12 @@
-.navbar {
-  padding: 20px 0;
+header {
   background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 1350px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
