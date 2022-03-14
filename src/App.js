@@ -23,31 +23,45 @@ function App() {
     music: 'Music',
     mathematics: 'Mathematics',
     religionmythology: 'Religion & Mythology',
-    sportsleisure: 'Sports & Leisure',
+    sportsleisure: 'Sports & Leisure'
   };
+
+  const localStorage = window.localStorage;
+
+  const currentState = localStorage.savedQuestions
+    ? JSON.parse(localStorage.savedQuestions).length
+    : null;
+
+  const [numQuestionsSaved, setNumQuestionsSaved] = React.useState(currentState);
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar numQuestionsSaved={numQuestionsSaved} setNumQuestionsSaved={setNumQuestionsSaved} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/categories' element={<Categories allCategories={allCategories} />} />
         <Route
-          path="/categories"
-          element={<Categories allCategories={allCategories} />}
+          path='/categories/:category_name'
+          element={
+            <Category
+              allCategories={allCategories}
+              numQuestionsSaved={numQuestionsSaved}
+              setNumQuestionsSaved={setNumQuestionsSaved}
+            />
+          }
         />
         <Route
-          path="/categories/:category_name"
-          element={<Category allCategories={allCategories} />}
+          path='/myquiz'
+          element={
+            <MyQuiz
+              allCategories={allCategories}
+              numQuestionsSaved={numQuestionsSaved}
+              setNumQuestionsSaved={setNumQuestionsSaved}
+            />
+          }
         />
-        <Route
-          path="/myquiz"
-          element={<MyQuiz allCategories={allCategories} />}
-        />
-        <Route
-          path="/randomquiz"
-          element={<RandomQuiz allCategories={allCategories} />}
-        />
+        <Route path='/randomquiz' element={<RandomQuiz allCategories={allCategories} />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,7 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ numQuestionsSaved, setNumQuestionsSaved }) {
+  const localStorage = window.localStorage;
+
+  React.useEffect(() => {
+    const numQuestions = JSON.parse(localStorage.savedQuestions).length;
+    if (numQuestions !== 0) {
+      setNumQuestionsSaved(numQuestions);
+    } else {
+      setNumQuestionsSaved(null);
+    }
+  }, [localStorage, numQuestionsSaved, setNumQuestionsSaved]);
+
   return (
     <header>
       <nav className='navbar'>
@@ -17,8 +28,9 @@ function Navbar() {
           </Link>
         </div>
         <div className='nav-userQuiz'>
-          <Link className='navbar-item' to='/myquiz'>
+          <Link className='navbar-item my-quiz' to='/myquiz'>
             My Quiz
+            <div className='num-saved-questions'>{numQuestionsSaved}</div>
           </Link>
           <Link className='navbar-item' to='/randomquiz'>
             Random Quiz
