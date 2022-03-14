@@ -8,10 +8,10 @@ Collaborators: Joe Deering & Emily Daykin
 <img src="./src/assets/homepage-image.jpeg" />
 </p>
 <p>
-<img src="./src/assets/categories-image.jpeg" width="49%"/><img src="./src/assets/category-image.jpeg" width="49%"/>
+<img src="./src/assets/categories-image.jpeg" width="45%"/><img src="./src/assets/category-image.jpeg" width="45%"/>
 </p>
 <p>
-<img src="./src/assets/myquiz-image.jpeg" width="49%"/><img src="./src/assets/randomquiz-image.jpeg" width="49%"/>
+<img src="./src/assets/myquiz-image.jpeg" width="45%"/><img src="./src/assets/randomquiz-image.jpeg" width="45%"/>
 </p>
 
 ## Technologies Used:
