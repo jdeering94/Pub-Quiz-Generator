@@ -23,10 +23,9 @@ Initially, we decided to work with a free API from cocktail DB. Upon working wit
 We began by pseudocoding out the necessary code and design of the different components. Our MVP was designated as a website that would display different trivia categories, and when they are clicked, they link to a new page that displays a selection of 30 questions from that category. The main difficulty getting to our MVP was the use of useParams, and then the accessing of the questions from the API. Once we reached our MVP, we concentrated on styling using vanilla CSS to give the site a more unique feel. Due to the limitations of the API, we had to come up with a way to make sure the questions all had unique IDs, allowing for us to reach our stretch goal, the ability to curate a list of chosen questions as well as a randomly generated one. Once we met these goals, we decided to refine the random category component, added the options of three amounts of questions to be generated, required a small change to the api call.
 
 ### Wireframes:
+<img src="./src/assets/joe-excalidraw.jpeg" />
+<img src="./src/assets/emily-excalidraw.jpeg" />
 
-- SCREENSHOTS of excalidraw design + pseudocode
-  <img src="./src/assets/joe-excalidraw.jpeg" />
-
-## Unsolved problems / Major Hurdles
+## Major Hurdles
 
 The biggest hurdle was understanding the relationship between localStorage and state, and more specifically making sure that changes in one reflected in changes in the other, as well as making sure that these changes were apparent to the user through CSS.
