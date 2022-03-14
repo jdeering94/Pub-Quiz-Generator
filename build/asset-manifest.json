@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cbaa0f21.css",
+    "main.js": "/static/js/main.a473a984.js",
+    "static/media/about-body.jpeg": "/static/media/about-body.5f40ea9815839c9c0b30.jpeg",
+    "static/media/religionmythology.jpeg": "/static/media/religionmythology.7b9ccdf0f1d1480f20c4.jpeg",
+    "static/media/toysgames.jpeg": "/static/media/toysgames.94f362ea7e10f5915059.jpeg",
+    "static/media/home-body.jpeg": "/static/media/home-body.7b4deff842277ae9e06e.jpeg",
+    "static/media/artliterature.jpeg": "/static/media/artliterature.9552c931da066c677773.jpeg",
+    "static/media/peopleplaces.jpeg": "/static/media/peopleplaces.8344003fb1cf8ee675be.jpeg",
+    "static/media/scienceandnature.jpeg": "/static/media/scienceandnature.5471fef05899743b1ff3.jpeg",
+    "static/media/mathematics.jpeg": "/static/media/mathematics.baf2b15763a8c7d4fc4b.jpeg",
+    "static/media/historyholidays.jpeg": "/static/media/historyholidays.b570adb27ae59417abe8.jpeg",
+    "static/media/music.jpeg": "/static/media/music.37704de8cf503b5ac43e.jpeg",
+    "static/media/sportsleisure.jpeg": "/static/media/sportsleisure.ab2cdc18cae403f89811.jpeg",
+    "static/media/entertainment.jpeg": "/static/media/entertainment.2cc7729490eb9c76c58c.jpeg",
+    "static/media/fooddrink.jpeg": "/static/media/fooddrink.1aff17b4bd77974e30ac.jpeg",
+    "static/media/geography.jpeg": "/static/media/geography.0df801bd6c2916499a8e.jpeg",
+    "static/media/myquiz.jpeg": "/static/media/myquiz.1a4cce600cb46904235e.jpeg",
+    "static/media/language.jpeg": "/static/media/language.e86e75ecdc453cbdf4bc.jpeg",
+    "static/media/pub.jpeg": "/static/media/pub.c1bbf2538ecf39e0bd09.jpeg",
+    "static/media/general.jpeg": "/static/media/general.506595b9c48fc69f2622.jpeg",
+    "index.html": "/index.html",
+    "main.cbaa0f21.css.map": "/static/css/main.cbaa0f21.css.map",
+    "main.a473a984.js.map": "/static/js/main.a473a984.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbaa0f21.css",
+    "static/js/main.a473a984.js"
+  ]
+}
