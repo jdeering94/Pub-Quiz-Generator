@@ -5,11 +5,13 @@ function Navbar({ numQuestionsSaved, setNumQuestionsSaved }) {
   const localStorage = window.localStorage;
 
   React.useEffect(() => {
-    const numQuestions = JSON.parse(localStorage.savedQuestions).length;
-    if (numQuestions !== 0) {
-      setNumQuestionsSaved(numQuestions);
-    } else {
-      setNumQuestionsSaved(null);
+    if (localStorage.savedQuestions) {
+      const numQuestions = JSON.parse(localStorage.savedQuestions).length;
+      if (numQuestions !== 0) {
+        setNumQuestionsSaved(numQuestions);
+      } else {
+        setNumQuestionsSaved(null);
+      }
     }
   }, [localStorage, numQuestionsSaved, setNumQuestionsSaved]);
 
