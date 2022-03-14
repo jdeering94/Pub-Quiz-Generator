@@ -10,11 +10,11 @@ Home Page
 </p>
 <p>
 Category Pages
-<img src="./src/assets/categories-image.jpeg" /><img src="./src/assets/category-image.jpeg" />
+<img src="./src/assets/categories-image.jpeg" width="49%"/><img src="./src/assets/category-image.jpeg" width="49%"/>
 </p>
 <p>
 Quiz Pages
-<img src="./src/assets/myquiz-image.jpeg"/><img src="./src/assets/randomquiz-image.jpeg" />
+<img src="./src/assets/myquiz-image.jpeg" width="49%"/><img src="./src/assets/randomquiz-image.jpeg" width="49%"/>
 </p>
 
 ## Technologies Used:
