@@ -9,6 +9,7 @@ import './styles/category.scss';
 import './styles/my-quiz.scss';
 import './styles/random-quiz.scss';
 import './styles/responsive-design.scss';
+import './styles/footer.scss';
 import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
