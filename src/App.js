@@ -43,7 +43,13 @@ function App() {
         <Route path='/categories' element={<Categories allCategories={allCategories} />} />
         <Route
           path='/categories/:category_name'
-          element={<Category allCategories={allCategories} />}
+          element={
+            <Category
+              allCategories={allCategories}
+              numQuestionsSaved={numQuestionsSaved}
+              setNumQuestionsSaved={setNumQuestionsSaved}
+            />
+          }
         />
         <Route
           path='/myquiz'

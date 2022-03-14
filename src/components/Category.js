@@ -3,7 +3,7 @@ import { triviaAPI } from '../lib/api';
 import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
-function Category({ allCategories }) {
+function Category({ allCategories, numQuestionsSaved, setNumQuestionsSaved }) {
   const [questions, setQuestions] = React.useState(null);
   const { category_name } = useParams();
 
@@ -34,7 +34,14 @@ function Category({ allCategories }) {
 
   React.useEffect(() => {
     localStorage.setItem('savedQuestions', JSON.stringify(savedQs));
-  }, [localStorage, savedQs]);
+
+    const numQuestions = JSON.parse(localStorage.savedQuestions).length;
+    if (numQuestions !== 0) {
+      setNumQuestionsSaved(numQuestions);
+    } else {
+      setNumQuestionsSaved(null);
+    }
+  }, [localStorage, savedQs, setNumQuestionsSaved]);
 
   function saveQuestion(ques, ans, id) {
     // check for existing question(id):
