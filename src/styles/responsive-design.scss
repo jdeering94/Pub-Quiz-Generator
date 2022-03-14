@@ -39,11 +39,6 @@
 
 // mobile
 @media (max-width: 495px) {
-  .generate-quiz {
-    font-size: 15px; 
-    padding: 5px 10px;
-  }
-
   .navbar {
     padding-bottom: 15px;
 
@@ -51,9 +46,26 @@
       font-size: 14px;
     }
   }
+  .home-body h1 {
+    font-size: 60px;
+  }
+
+  .about-body h1 {
+    font-size: 38px;
+  }
+  .about-text {
+    font-size: 16px;
+  }
+
+  .generate-quiz {
+    font-size: 15px; 
+    padding: 5px 10px;
+  }
+
   .my-quiz {
     .num-saved-questions {
       font-size: 14px;
     }
   }
+  
 }
