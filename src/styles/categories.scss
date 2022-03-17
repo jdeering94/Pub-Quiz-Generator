@@ -2,7 +2,7 @@
   background-image: url('../assets/pub.jpeg');
   background-size: cover;
   background-position: center center;
-  min-height: calc(100vh - var(--navHeight));
+  min-height: calc(100vh - var(--navHeight) - var(--footerHeight) - 5px);
   display: flex;
   justify-content: center;
 }
