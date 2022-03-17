@@ -21,11 +21,11 @@
   .categories-container, 
   .myQuiz-section, 
   .category-container {
-    min-height: calc(100vh - var(--navHeight) + 15px);
+    min-height: calc(100vh - var(--navHeight) - var(--footerHeight) + 2px);
   }
 
   .home-body, .about-body {
-    min-height: calc(100vh - var(--navHeight) - 23px);
+    min-height: calc(100vh - var(--navHeight) - var(--footerHeight) - 37px);
   }
 }
 
@@ -50,8 +50,10 @@
   }
 
   .generate-quiz {
-    font-size: 15px; 
-    padding: 5px 10px;
+    font-size: 13px; 
+    padding: 2px 6px;
+    margin: 0 5px;
+    margin-bottom: 15px;
   }
 
   .my-quiz {
@@ -59,5 +61,28 @@
       font-size: 14px;
     }
   }
-  
+}
+
+// small mobiles
+@media (max-width: 350px) {
+  .navbar {
+    padding: 8px;
+    .navbar-item {
+      font-size: 11px;
+    }
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .home-body, .about-body {
+    min-height: calc(100vh - var(--navHeight) - var(--footerHeight) - 19px);
+  }
+
+  .categories-container, 
+  .myQuiz-section, 
+  .category-container {
+    min-height: calc(100vh - var(--navHeight) - var(--footerHeight) + 21px);
+  }
 }

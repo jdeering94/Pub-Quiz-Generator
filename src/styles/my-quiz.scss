@@ -4,7 +4,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - var(--navHeight));
+  min-height: calc(100vh - var(--navHeight) - var(--footerHeight) - 5px);
   display: flex;
   justify-content: center;
 }
