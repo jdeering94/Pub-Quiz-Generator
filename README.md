@@ -27,7 +27,7 @@ Collaborators: Joe Deering & Emily Daykin
 
 ## Installation Instructions:
 
-- https://pub-quiz-generator-ga-sei62.netlify.app/
+- [Test it out live on desktop or mobile!](https://pub-quiz-generator-ga-sei62.netlify.app/)
 - Clone repo --> `npm install` --> `npm start`
 
 ## General Approach:
