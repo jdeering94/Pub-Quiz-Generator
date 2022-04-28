@@ -1,4 +1,5 @@
-# Pub Quiz Generator - GA Project 2
+# Pub Quiz Generator
+Our pub quiz generator lets you browse over 400 quiz questions across 14 categories from History & Holidays and Mathematics to Music and Games. Add as many questions as you'd like to your basket, or have our application generate a random quiz (of 5, 10 or 25 questions) for you!
 
 Collaborators: Joe Deering & Emily Daykin
 
@@ -29,6 +30,12 @@ Collaborators: Joe Deering & Emily Daykin
 
 - [Test it out live on desktop or mobile!](https://pub-quiz-generator-ga-sei62.netlify.app/)
 - Clone repo --> `npm install` --> `npm start`
+
+## Features:
+- Dive into over 30 randomised questions per category
+- Browse questions from 14 different categories
+- Add or remove question-answer cards to/from your basket, and save them for later
+- Generate a random quiz (of 5, 10 or 25 questions)
 
 ## General Approach:
 
