@@ -1,7 +1,5 @@
 # Pub Quiz Generator
-Our pub quiz generator lets you browse over 400 quiz questions across 14 categories from History & Holidays and Mathematics to Music and Games. Add as many questions as you'd like to your basket, or have our application generate a random quiz (of 5, 10 or 25 questions) for you!
-
-Collaborators: Joe Deering & Emily Daykin
+Our pub quiz generator lets you browse over 400 quiz questions across 14 categories from History & Holidays and Mathematics to Music and Games. Add as many questions as you'd like to your basket, or have our application generate a random quiz (of 5, 10 or 25 questions) for you! This application calls 17 endpoints from an external API, and was created by Joe Deering & Emily Daykin over a 48-hour period.
 
 ## Site Overview
 
@@ -22,9 +20,9 @@ Collaborators: Joe Deering & Emily Daykin
 - Front End: React
   - SPA Routing and Components
   - Packages: axios for API handling, UUID4 for unique IDs
-- Styling: SCSS
+- Styling: Sass
 - Version Control: Git
-- Deployment: Netlify for deployment
+- Deployment: Netlify
 
 ## Installation Instructions:
 
